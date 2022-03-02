@@ -2091,6 +2091,7 @@ func (s *BgpServer) addPathStream(vrfId string, pathList []*table.Path) error {
 }
 
 func (s *BgpServer) AddPath(ctx context.Context, r *api.AddPathRequest) (*api.AddPathResponse, error) {
+	fmt.Printf("!! TRACE !! Inside AddPath")
 	if r == nil || r.Path == nil {
 		return nil, fmt.Errorf("nil request")
 	}
